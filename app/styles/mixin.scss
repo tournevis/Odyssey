@@ -1,0 +1,17 @@
+$trainColor:#0f0200;
+$bodyWidth:17780px;
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin textEnter{
+  @include transition-property(opacity);
+  @include transition-duration(1s);
+}

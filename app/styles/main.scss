@@ -1,0 +1,225 @@
+@import 'compass';
+@import 'mixin';
+
+//@include parallax-init();
+
+html,body {
+    img {
+     max-height:700px
+    } 
+    font-family: "Avenir Next";
+    //overflow-x:auto;
+     overflow-y:hidden;
+    position: relative;
+    width:$bodyWidth;
+    z-index: -10;
+    background: linear-gradient(#09151F, #542B28), url(../images/bodyMountain.png);
+    background-position: bottom,bottom;
+    background-repeat:repeat-x,repeat-x;
+    background-blend-mode:multiply;
+    list-style-type: none; 
+}
+@font-face {
+  font-family:'Avenir Next';
+  src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot');
+  src: url('../fonts/AvenirNextLTPro-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirNextLTPro-Bold_gdi.woff') format('woff'),
+    url('../fonts/AvenirNextLTPro-Bold_gdi.ttf') format('truetype'),
+    url('../fonts/AvenirNextLTPro-Bold_gdi.svg#AvenirNextLTPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+/* BANDE ET NAVIGATION */
+.band{
+    display: inline-block;
+    height:6em;
+    width: $bodyWidth;
+   // z-index: 1;
+    background-color:#000;
+    padding:0px;
+}
+#top-bar{
+    top:0;
+}
+#bot-bar{
+   bottom :0;
+}
+#nav-bot{
+    padding-top: 2em;
+    text-align: center;
+    width: 100%;
+    color: #CCC;
+    h2,p{
+        margin: 0px;
+    }
+}
+
+#body-container{ 
+
+  position: relative;
+    float: left;
+    width:$bodyWidth;
+    height: 700px;
+    max-height: 750px;
+}
+#train{
+  position:absolute;
+  top:450px;
+  left:-800px;
+
+}
+#rails{
+  position: absolute;
+  top: 480px;
+  z-index: -1;
+    background-color:$trainColor;
+    
+    height:5px;
+    width:$bodyWidth;
+}
+.inside{
+  background: #000; 
+}
+.matchEnd{
+  width:3460px;
+}
+canvas{  
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  left:0;
+  top:0;
+}
+/* SCENE COMPLETE */
+.scene{
+    position: relative;
+    float:left;
+     height: 700px;
+    width: 1169px; 
+     margin: 0;
+     padding: 0;  
+}
+.sceneBridge{
+   z-index: -1;
+    position: relative;
+    float:left;
+     height: 700px;
+     width: 3069px; 
+     margin: 0;
+     padding: 0;  
+}
+
+.tunnelExit{
+  position: absolute;
+  right: 0;
+}
+
+.imageY{
+    position: absolute;
+    bottom: 0;
+   // background: url('../images/gare.png');
+}
+.data2{
+  position: absolute;
+  left:200px;
+  bottom: 0;
+}
+.data3{
+  position: absolute;
+  left:600px;
+  bottom: 0;
+}
+#lights{
+
+  :nth-child(1){
+        position:absolute;
+        bottom: 0;
+        left:0;
+    }
+    :nth-child(2){
+      
+        position:absolute;
+        bottom: 0;
+        right:0;
+    }
+}
+.light_auto{
+  width:750px;
+  height: 350px;
+
+  background: url('../images/lampe_autoroute.png');
+  background-repeat: repeat-x;;
+}
+#lune{
+  position: absolute;
+  top:0;
+  left:250px;
+}
+.end{
+  position: relative;
+  width: 1169px;
+  height: 700px;
+  background: #000;
+}
+#parallax{
+  position: absolute;
+  bottom: -50px;
+}
+
+#middleGround{
+  position: absolute;
+  bottom:0;
+ // left:0;
+   /* position: absolute;
+    bottom:0;
+    left:0;
+    height: 300px;
+    */
+
+    :nth-child(1){
+    
+        
+
+         background: url(../images/montagne_background.png);
+    }
+    :nth-child(2){
+      
+
+       
+     
+        background: url(../images/montagnes_midleground.png);
+    }
+    :nth-child(3){
+    
+      
+
+         background: url(../images/montagnes_foreground.png);
+    }
+
+  >* {
+    // position: absolute;
+     margin: 0;
+      width:12000px;
+    height: 200px;
+    background-repeat: repeat-x;
+   
+  }
+}
+
+/* APPEND TEXT*/
+.appendText{
+  //@include textEnter();
+  position:absolute;
+  top: -40px;
+  left :50%;
+  color:#CCC;
+  background-color:#222 ;
+  background-blend-mode:multiply;
+  opacity: 0.8;
+  padding: 0px 4px 3px 4px;
+  @include border-radius(20px);
+}
+
+

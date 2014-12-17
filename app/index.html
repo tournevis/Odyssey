@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>TravelApp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--
+        <div id="top-bar" class="band">
+        </div>
+        
+       -->
+       
+        <div id="body-container" >
+            <div id="canvasId">
+            </div>
+                
+            <!-- SCENE --> 
+            <div id="train">
+            <img src="images/train.png">
+            </div>
+            <div class= "scene">  
+                 <div class="imageY">
+                     <img src="images/tunnel_enter.png" />
+                </div>
+            </div> 
+            <div class="scene" style='z-index :-1;'>
+                <div class="imageY"> 
+                    <img src="images/gare.png" />
+                    <div id='lune'>
+                        <img src="images/lune.png" />
+                    </div>
+                    <div id="lights" >
+                        <img src="images/lampe_gare.png"/>
+                        <img src="images/lampe_gare.png"/>
+                    </div>  
+                </div>
+            </div>
+            <div class="scene">
+                <div class="imageY">
+                    <img src="images/lampe_autoroute_2.png">
+                </div>    
+                <div class="imageY light_auto">
+                    
+                </div>  
+            </div>
+            <div class="scene">
+                <div class="imageY" >
+                 
+                        <div class="dataMountain data1"> <img  src="images/01.png"></div>
+                        <div class="dataMountain data2"> <img  src="images/02.png"></div>
+                        <div class="dataMountain data3"> <img  src="images/03.png"></div>
+                   
+                   
+                </div> 
+            </div>
+            <div class="sceneBridge">
+                <div class="imageY">
+                    <img src="images/bridge.png">
+                </div>     
+            </div>
+             <div class="scene">
+                <div class="meteo">
+                    <img src="images/lune.png">
+                </div>     
+            </div>
+             <div class="sceneBridge">
+                <div class="imageY">
+                    <img src="images/bridge_2.png">
+                </div>     
+            </div>
+
+             <div class="scene ">
+                <div class='tunnelExit '>
+                    <img src="images/tunnel_exit.png">
+                </div>       
+            </div>
+            
+            <!-- Scene End -->
+            <div class="scene">
+                <div class="end">    
+                </div>    
+            </div>
+            <div class="scene matchEnd ">
+                <div class="matchEnd">
+                    <img class='inside' src="images/inside.png">
+                </div>       
+            </div>
+            <div id="rails">
+            </div>
+            <div id='parallax' >
+                <div id="middleGround" >
+                    <div class ="layer" data-depth=".10"></div>
+                     <div class ="layer" data-depth=".20"></div>
+                      <div class ="layer" data-depth=".30"></div>
+                </div>
+            </div>
+        </div>  
+
+       <!-- Body Container End  -->
+
+        <!-- SVG part End -->
+        <div id="bot-bar" class="band">
+            <div id="nav-bot">
+                <h2>NavBar</h2>
+                <p> Ici on va avoir le logo de la Navbar</p>
+            </div>
+        </div>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery.jInvertScroll/index.js"></script>
+        <script src="bower_components/parallax/deploy/parallax.js"></script>
+        <script src="bower_components/parallax/deploy/parallax.min.js"></script>
+        <script src="bower_components/parallax/deploy/jquery.parallax.js"></script>
+        <script src="bower_components/parallax/deploy/jquery.parallax.min.js"></script>
+        <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+        <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
