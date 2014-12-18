@@ -64,12 +64,23 @@
                 </div>  
             </div>
             <div class="scene">
-                <div class="imageY" id="data" >
-                 
-                        <div class="dataMountain data1"> <img  src="images/01.png"></div>
-                        <div class="dataMountain data2"> <img  src="images/02.png"></div>
-                         <div class="dataMountain data3"> <img  src="images/04.png"></div>
-                         <div class="dataMountain data4"> <img  src="images/03.png"></div>         
+                <div class="imageY" id="data" >            
+                        <div class="dataMountain data1"> 
+                            <img  src="images/01.png">
+                            <p class="appendTextMountain"> 9 : 00 </p>
+                        </div>
+                        <div class="dataMountain data2"> 
+                            <img  src="images/02.png">
+                            <p class="appendTextMountain"> 12 : 00 </p>
+                        </div>
+                         <div class="dataMountain data3">
+                          <img  src="images/04.png">
+                          <p class="appendTextMountain"> 16 : 00 </p>
+                         </div>
+                         <div class="dataMountain data4">
+                          <img  src="images/03.png">
+                          <p class="appendTextMountain"> 19 : 00 </p>
+                      </div>         
                 </div> 
             </div>
             <div class="sceneBridge">
@@ -83,6 +94,12 @@
                     <img src="images/meteo_gauche.png">
                     <img src="images/meteo_droite.png">
                     <img src="images/lune.png">
+                    <div id="meteoData">
+                        <p id="m1">9°</p>
+                        <p id="m2">11°</p>
+                        <p id="m3">9°</p>
+                        <p id="m4">13°</p>  
+                    </div>
                 </div>     
             </div>
              <div class="sceneBridge">
@@ -107,7 +124,12 @@
                     <img class='inside' src="images/inside.png">
                     <img class='bars' src="images/poignee.png" >
                     <img class='bars2' src="images/poignee.png" >
-                    <p id="seat">30</p>
+                    <p id="seat"></p>
+                    <div id="tweetWall">
+                        <img id ="tweetPic" src="images/tweetPic.png"/>
+                        <p id="tweetName">ODISSEY</p> 
+                        <p id="tweetText"> First Tweet to project Odissey ! </br> Hello World !</p>
+                    </div>
                 </div>       
             </div>
             <div id="rails">
@@ -124,10 +146,10 @@
        <!-- Body Container End  -->
         <div class="adaptator">
             <div class="nav">
-                <div class ="nav1"></div>
-                <div class ="nav2"></div>
-                <div class ="nav3"></div>
-                <div class ="nav4"></div>
+                <div class ="nav1 btn"></div>
+                <div class ="nav2 btn"></div>
+                <div class ="nav3 btn"></div>
+                <div class ="nav4 btn"></div>
             </div>
         </div>
 
@@ -145,6 +167,9 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/parallax/deploy/parallax.js"></script>
+        <script src="bower_components/gsap/src/uncompressed/TimelineLite.js"></script>
+        <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+        <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

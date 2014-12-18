@@ -7,7 +7,7 @@ html,body {
    
     font-family: "Avenir Next";
     //overflow-x:auto;
-     overflow-y:hidden;
+    // overflow-y:hidden;
     position: relative;
     width:$bodyWidth;
     z-index: -10;
@@ -31,11 +31,15 @@ html,body {
   :nth-child(1){
     position: absolute;
     z-index: 5;
+
+      .btn.selected {
+          background: $orange
+      }
     
      :hover{
           width: 30px;
           height: 30px;
-          top:45px;
+          bottom: 40%;
           left: -5px;
       }
     >* {
@@ -44,16 +48,18 @@ html,body {
       width: 20px;
       height: 20px;
       margin: 20px;
-      top:50px;
+      bottom:45%;
       left: 0px;
       position: relative;
       float: left;
-      @include transition-property(width,height,top,left);
+      @include transition-property(width,height,bottom,left);
       @include transition-duration(0.2s);
       @include transition-timing-function(ease-in);
-
     }
   }
+}
+.nav{
+  bottom: 50%;
 }
 
 #body-container{ 
@@ -69,12 +75,14 @@ html,body {
     background-blend-mode:multiply;
     list-style-type: none; 
     margin: 0;
+   //  overflow-y:hidden;
 }
 #train{
   position:absolute;
   top:450px;
   left:-800px;
-
+  letter-spacing: 0.4em;
+  font-size:0.5em;
 }
 #rails{
   position: absolute;
@@ -89,7 +97,9 @@ html,body {
   background: #000; 
 }
 .matchEnd{
-  width:3460px;
+  position: relative;
+  background:#000;
+  width:3560px;
 }
 .bars{
   position: absolute;
@@ -100,6 +110,38 @@ html,body {
   position: absolute;
   top:190px;
   left: 1800px;
+}
+#tweetWall{
+  position:absolute;
+  letter-spacing: 0.2em;
+  color:#FFF;
+  width:420px;
+  right:265px;
+  top: 280px;
+}
+#tweetName{
+  float:left;
+  margin-left:5px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#tweetPic{
+  float:left;
+  margin-right: 10px;
+  border-style:solid ;
+  border-width:3px;
+  border-color:#FFF;
+  width:80px;
+  height:80px;
+}
+#tweetText{
+  float:left;
+  margin-left:5px;
+  margin-top: 0;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 canvas{ 
   position: absolute;
@@ -191,6 +233,40 @@ canvas{
     bottom: 0;
   }
 }
+#meteoData{
+  letter-spacing: 0.1em;
+  font-weight:bold;
+  position:relative;
+  width:10px;
+  height:10px;
+  color:#FFF;
+
+  :nth-child(1){
+    position: absolute;
+    left:-20px;
+    top:85px; 
+  }
+  :nth-child(2){
+    position: absolute;
+    color:#000;
+    left:130px;
+    top:100px; 
+  }
+  :nth-child(3){
+    position: absolute;
+    left:315px;
+    top:95px; 
+  }
+  :nth-child(4){
+    position: absolute;
+    left:558px;
+    top:35px; 
+  }>* {
+    opacity: 0;
+      // visibility: hidden;
+  }
+}
+
 #lune{
   position: absolute;
   top:0;
@@ -209,16 +285,14 @@ canvas{
     top: 300px;
     left:517px;
     font-size: 4em;
+    font-weight: bold;
   }
 #parallax{
   position: absolute;
-  bottom: 0;
+  bottom: -6px; // pour corriger la profondeur qui laisse 1 pixel de marge 
   width: 13152px;
  height: 200px;
  overflow:hidden;
-}
-.nav{
-  bottom: 40px;
 }
 
 /* My Parallax  Style*/
@@ -236,7 +310,6 @@ canvas{
     }
   >* {
     position: absolute;
-    bottom:-2px; // -2 px pour corriger la profondeur qui laisse 1 pixel de marge 
     margin: 0;
     width:$bodyWidth*2;
     z-index: 4;
@@ -247,11 +320,23 @@ canvas{
 
 /* APPEND TEXT*/
 
-.appendText{
+.appendTextTrain{
   //@include textEnter();
   position:absolute;
-  top: -70px;
-  left :42%;
+  top: -40px;
+  right:180px;
+  color:#FFF;
+  font-size:2em;
+ // background-color:#222 ;
+  opacity: 1;
+  padding: 0px 4px 3px 4px;
+  @include border-radius(20px);
+}
+.appendTextMountain{
+  //@include textEnter();
+  position:absolute;
+  top: -80px;
+  right:160px;
   color:#FFF;
   font-size:2em;
  // background-color:#222 ;
