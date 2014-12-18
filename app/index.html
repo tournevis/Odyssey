@@ -25,12 +25,11 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <!--
-        <div id="top-bar" class="band">
+     
+        <div class="adaptator" >
+           
         </div>
-        
-       -->
-       
+
         <div id="body-container" >
             <div id="canvasId">
             </div>
@@ -65,13 +64,12 @@
                 </div>  
             </div>
             <div class="scene">
-                <div class="imageY" >
+                <div class="imageY" id="data" >
                  
                         <div class="dataMountain data1"> <img  src="images/01.png"></div>
                         <div class="dataMountain data2"> <img  src="images/02.png"></div>
-                        <div class="dataMountain data3"> <img  src="images/03.png"></div>
-                   
-                   
+                         <div class="dataMountain data3"> <img  src="images/04.png"></div>
+                         <div class="dataMountain data4"> <img  src="images/03.png"></div>         
                 </div> 
             </div>
             <div class="sceneBridge">
@@ -81,6 +79,9 @@
             </div>
              <div class="scene">
                 <div class="meteo">
+                    <img src="images/degreeline.png">
+                    <img src="images/meteo_gauche.png">
+                    <img src="images/meteo_droite.png">
                     <img src="images/lune.png">
                 </div>     
             </div>
@@ -104,26 +105,29 @@
             <div class="scene matchEnd ">
                 <div class="matchEnd">
                     <img class='inside' src="images/inside.png">
+                    <img class='bars' src="images/poignee.png" >
+                    <img class='bars2' src="images/poignee.png" >
+                    <p id="seat">30</p>
                 </div>       
             </div>
             <div id="rails">
             </div>
-            <div id='parallax' >
+            <div id="parallax" >
                 <div id="middleGround" >
-                    <div class ="layer" data-depth=".10"></div>
-                     <div class ="layer" data-depth=".20"></div>
-                      <div class ="layer" data-depth=".30"></div>
+                    <div class ="layer" data-depth="0.10"></div>
+                    <div class ="layer" data-depth="0.20"></div>
+                    <div class ="layer" data-depth="0.30"></div>
                 </div>
             </div>
         </div>  
 
        <!-- Body Container End  -->
-
-        <!-- SVG part End -->
-        <div id="bot-bar" class="band">
-            <div id="nav-bot">
-                <h2>NavBar</h2>
-                <p> Ici on va avoir le logo de la Navbar</p>
+        <div class="adaptator">
+            <div class="nav">
+                <div class ="nav1"></div>
+                <div class ="nav2"></div>
+                <div class ="nav3"></div>
+                <div class ="nav4"></div>
             </div>
         </div>
 
@@ -140,18 +144,12 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/jquery.jInvertScroll/index.js"></script>
         <script src="bower_components/parallax/deploy/parallax.js"></script>
-        <script src="bower_components/parallax/deploy/parallax.min.js"></script>
-        <script src="bower_components/parallax/deploy/jquery.parallax.js"></script>
-        <script src="bower_components/parallax/deploy/jquery.parallax.min.js"></script>
-        <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
-        <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
